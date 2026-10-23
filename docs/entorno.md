@@ -91,9 +91,23 @@ Resultado de `java -version`, `node -v` y `jupyter lab --version` **después**:
 
 Salida completa de la tarea **Build completo** (paso 15):
 
-```
-pega aquí
-```
+=== FACTURA generada con Java 27 ===
+Dominio web anual              12.00 EUR
+Alojamiento web                59.90 EUR
+Logotipo corporativo          150.00 EUR
+-----------------------------------------
+Base imponible                221.90 EUR
+IVA (21 %)                     46.60 EUR
+TOTAL                         268.50 EUR
+
+=== FACTURA generada con Node.js v24.22.1 ===
+Dominio web anual              12.00 EUR
+Alojamiento web                59.90 EUR
+Logotipo corporativo          150.00 EUR
+-----------------------------------------
+Base imponible                221.90 EUR
+IVA (21 %)                     46.60 EUR
+TOTAL                         268.50 EUR
 
 | Lenguaje   | Archivo fuente          | Herramienta que lo traduce | Archivo generado | Cómo se ejecuta |
 | ---------- | ----------------------- | -------------------------- | ---------------- | --------------- |
@@ -102,7 +116,7 @@ pega aquí
 
 **Opcional:** ¿has podido ejecutar los mismos archivos desde JupyterLab (paso 19)? ¿Por qué funciona en los dos IDE sin instalar nada más?
 
->
+> No funciona Jupyter Lab
 
 ---
 
