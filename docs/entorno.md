@@ -147,7 +147,7 @@ TOTAL                         268.50 EUR
 
 **Opcional:** ¿has podido ejecutar los mismos archivos desde JupyterLab (paso 19)? ¿Por qué funciona en los dos IDE sin instalar nada más?
 
-> [!WARNING]
+> [!IMPORTANT]
 > No funciona Jupyter Lab
 
 ---
@@ -220,7 +220,7 @@ found 0 vulnerabilities
 
 Anota cualquier problema que hayas tenido y cómo lo resolviste (también si usaste un fragmento completo).
 
-> Aviso:
+> [!IMPORTANT]
 > No he conseguido que funcione Jupyter
 
 ## 7. Reflexión final
