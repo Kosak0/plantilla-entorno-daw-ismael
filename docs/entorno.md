@@ -47,9 +47,9 @@ Resultado de `java -version`, `node -v` y `jupyter lab --version` **después**:
 | Licencia / responsable | GitHub / Microsoft. | BSD-3-Clause / Project Jupyter. |
 | Coste y límites | Free: 120 h y 15 GB/mes; Pro: 180 h y 20 GB/mes. Excedentes, de pago. | Gratis; el alojamiento puede tener coste. |
 | ¿Fuera de GitHub? | No. VS Code sí puede usarse aparte. | Sí, localmente o en otro servidor. |
-| Lo que más me ha gustado |                             |            |
-| Lo que menos me ha gustado |                             |            |
-| ¿Para qué lo elegiría? |                             |            |
+| Lo que más me ha gustado |No depende de mi dispositivo|Que no carga, por lo que me ahorro trabajo|
+| Lo que menos me ha gustado |No tengo mis plugins y configs|No carga|
+| ¿Para qué lo elegiría? |Para algun proyecto ligero|Para desesperar a mis enemigos|
 
 ---
 
