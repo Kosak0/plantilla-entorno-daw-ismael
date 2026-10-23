@@ -83,7 +83,7 @@ Resultado de `java -version`, `node -v` y `jupyter lab --version` **después**:
 
 ¿Qué parte de toda esta configuración es **personal** (solo para ti) y qué parte es **del proyecto** (la recibe cualquiera que abra el repositorio)?
 
->
+> Es personal lo que configuro en mi perfil de VS Code y no guardo en el repositorio, como el tema activo o mis atajos de teclado. Es del proyecto lo que está guardado en sus archivos: `.devcontainer/devcontainer.json` define el entorno, las extensiones y `postCreateCommand`; `.vscode/settings.json` comparte los ajustes del editor; `.vscode/tasks.json` define las tareas; y `.vscode/daw.code-snippets` contiene el snippet. Así, cualquiera que abra el repositorio puede recibir esa configuración compartida.
 
 ---
 
@@ -111,8 +111,8 @@ TOTAL                         268.50 EUR
 
 | Lenguaje   | Archivo fuente          | Herramienta que lo traduce | Archivo generado | Cómo se ejecuta |
 | ---------- | ----------------------- | -------------------------- | ---------------- | --------------- |
-| Java       | `src/java/Factura.java` |                            |                  |                 |
-| TypeScript | `src/ts/factura.ts`     |                            |                  |                 |
+| Java       | `src/java/Factura.java` | `javac`                    | `build/java/Factura.class` y `build/factura.jar` | `java -jar build/factura.jar` |
+| TypeScript | `src/ts/factura.ts`     | `tsc` (TypeScript Compiler) | `dist/factura.js` | `node dist/factura.js` |
 
 **Opcional:** ¿has podido ejecutar los mismos archivos desde JupyterLab (paso 19)? ¿Por qué funciona en los dos IDE sin instalar nada más?
 
@@ -124,11 +124,11 @@ TOTAL                         268.50 EUR
 
 | Elemento                               | ¿Quién lo actualiza? | Modo (automático / manual / ninguno) | Qué he configurado yo |
 | -------------------------------------- | -------------------- | ------------------------------------ | --------------------- |
-| El editor de Codespaces                |                      |                                      |                       |
-| Las extensiones                        |                      |                                      |                       |
-| Java                                   |                      |                                      |                       |
-| Node.js                                |                      |                                      |                       |
-| Dependencias npm (lodash, typescript…) |                      |                                      |                       |
+| El editor de Codespaces                | GitHub / Microsoft   | Automático                           | Uso el editor proporcionado por Codespaces; no fijo su versión. |
+| Las extensiones                        | VS Code Marketplace  | Automático                           | Las extensiones del proyecto se indican en `devcontainer.json`; VS Code las instala al crear el entorno y gestiona sus actualizaciones. |
+| Java                                   | Feature de Dev Containers | Manual (al reconstruir el entorno) | He fijado la versión principal 21 en `devcontainer.json`; al reconstruir se instala esa versión. |
+| Node.js                                | Feature de Dev Containers | Manual (al reconstruir el entorno) | He añadido la feature de Node.js sin fijar una versión concreta. |
+| Dependencias npm (lodash, typescript…) | npm                  | Instalación automática; actualización manual | `postCreateCommand` ejecuta `npm install`; las versiones están fijadas en `package.json` y `package-lock.json`. |
 
 Versión de Java **antes** (paso 5) y **después** (paso 18):
 
@@ -169,7 +169,7 @@ found 0 vulnerabilities
 
 **Mi política de actualizaciones**: si este entorno lo usara un equipo de 5 personas durante todo el curso, ¿qué dejarías en automático y qué fijarías a mano? Justifícalo.
 
->
+> Dejaría que Codespaces y VS Code gestionen automáticamente las actualizaciones del editor y las extensiones, pero probaría los cambios importantes antes de que el equipo dependa de ellos. Fijaría las versiones principales de Java y Node.js en la configuración del contenedor y mantendría las dependencias npm registradas en `package-lock.json`, para que las cinco personas usen las mismas herramientas y versiones. Revisaría periódicamente las actualizaciones y `npm audit`; aplicaría cuanto antes las actualizaciones de seguridad, como la de lodash que eliminó las vulnerabilidades, y probaría las demás antes de incorporarlas para evitar que una actualización rompa el proyecto.
 
 ---
 
@@ -177,10 +177,10 @@ found 0 vulnerabilities
 
 Anota cualquier problema que hayas tenido y cómo lo resolviste (también si usaste un fragmento completo).
 
->
+> No he conseguido que funcione Jupyter
 
 ## 7. Reflexión final
 
 ¿Qué ventaja tiene describir el entorno «como código» frente a instalar cada programa a mano en tu ordenador? Piensa en un equipo con Mac y Windows.
 
->
+> Al describir el entorno como código, todos pueden recrear las mismas herramientas y versiones automáticamente, sin tener que instalar y configurar cada programa a mano. En un equipo con Mac y Windows, el contenedor ofrece un entorno común, lo que reduce diferencias entre sistemas y problemas del tipo «en mi ordenador sí funciona». Además, la configuración queda versionada con el proyecto y se puede revisar o actualizar de forma compartida.
