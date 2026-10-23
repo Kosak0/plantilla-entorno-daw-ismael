@@ -16,24 +16,24 @@
 Resultado de `java -version` y `node -v` **antes** de instalar nada:
 
 **Resultado de java -version**
-openjdk version "27" 2026-09-15
-OpenJDK Runtime Environment Temurin-27+35 (build 27+35)
-OpenJDK 64-Bit Server VM Temurin-27+35 (build 27+35, mixed mode, sharing)
+> bash: java: command not found
 
 **Resultado de node -v**
-v26.12.0
+> bash: node: command not found
 
 ¿Por qué crees que aparece ese mensaje? (relaciónalo con la diapositiva «Problemas habituales del entorno»)
 
->
+> Porque al no tener instalado java ni node en el codespace, no se han añadido al PATH
 
 ### 1.2. Después de la 1.ª reconstrucción (paso 5)
 
 Resultado de `java -version`, `node -v` y `jupyter lab --version` **después**:
 
-```
-pega aquí
-```
+> openjdk version "27" 2026-09-15
+> OpenJDK Runtime Environment Temurin-27+35 (build 27+35)
+> OpenJDK 64-Bit Server VM Temurin-27+35 (build 27+35, mixed mode, sharing)
+> v24.22.1
+> 4.6.4
 
 ¿Qué líneas nuevas han aparecido en `devcontainer.json`? Explica con tus palabras qué hace cada una:
 
