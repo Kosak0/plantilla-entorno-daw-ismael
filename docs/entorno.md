@@ -138,21 +138,28 @@ pega aquí
 
 Resultado de `npm outdated` (paso 17):
 
-```
-pega aquí
-```
+Package         Current    Wanted   Latest  Location                    Depended by
+@types/lodash  4.14.202  4.14.202  4.17.27  node_modules/@types/lodash  plantilla-entorno-daw-ismael
+@types/node    20.11.30  20.11.30   26.6.5  node_modules/@types/node    plantilla-entorno-daw-ismael
+lodash          4.17.20   4.17.20   4.18.1  node_modules/lodash         plantilla-entorno-daw-ismael
+typescript        5.4.5     5.4.5    7.0.2  node_modules/typescript     plantilla-entorno-daw-ismael
 
 Resultado de `npm audit` **antes** de actualizar lodash (solo el resumen final):
 
-```
-pega aquí
-```
+lodash vulnerable to Prototype Pollution via array path bypass in `_.unset` and `_.omit` - https://github.com/advisories/GHSA-f23m-r3pf-42rh
+Lodash has Prototype Pollution Vulnerability in `_.unset` and `_.omit` functions - https://github.com/advisories/GHSA-xxjr-mmjv-4gpg
+fix available via `npm audit fix --force`
+Will install lodash@4.18.1, which is outside the stated dependency range
+node_modules/lodash
+
+1 high severity vulnerability
+
+To address all issues, run:
+  npm audit fix --force
 
 Resultado de `npm audit` **después**:
 
-```
-pega aquí
-```
+found 0 vulnerabilities
 
 **Mi política de actualizaciones**: si este entorno lo usara un equipo de 5 personas durante todo el curso, ¿qué dejarías en automático y qué fijarías a mano? Justifícalo.
 
