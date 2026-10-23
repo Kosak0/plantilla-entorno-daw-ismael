@@ -57,8 +57,8 @@ Resultado de `java -version`, `node -v` y `jupyter lab --version` **después**:
 
 | Extensión               | ¿Para qué sirve? | ¿Qué cambió al instalarla? | ¿La mantengo? ¿Por qué? |
 | ----------------------- | ---------------- | -------------------------- | ----------------------- |
-| Extension Pack for Java |                  |                            |                         |
-| Code Spell Checker      |                  |                            |                         |
+| Extension Pack for Java | Añade herramientas para programar en Java. | Ayuda a escribir, ejecutar y revisar el código. | Sí, porque necesito trabajar con Java en la práctica. |
+| Code Spell Checker      | Busca errores de ortografía. | Marca palabras que pueden estar mal escritas y sugiere correcciones. | Sí, porque ayuda a revisar mis textos y comentarios. |
 
 ¿Qué diferencia hay entre instalar una extensión **solo desde el panel** y añadirla **también a `devcontainer.json`**?
 
