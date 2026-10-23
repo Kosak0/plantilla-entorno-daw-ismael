@@ -27,7 +27,7 @@ bash: node: command not found
 
 ¿Por qué crees que aparece ese mensaje? (relaciónalo con la diapositiva «Problemas habituales del entorno»)
 
-> [!TIP]
+**Respuesta:**
 > Porque al no tener instalado java ni node en el codespace, no se han añadido al PATH
 
 ### 1.2. Después de la 1.ª reconstrucción (paso 5)
@@ -50,7 +50,7 @@ v24.22.1
 }
 ```
 
-> [!TIP]
+**Respuesta:**
 > La primera muestra la fuente de la dependencia Python
 > La segunda indica instalar el editor Jupyter Lab
 > La tercera cierra ese apartado
@@ -78,7 +78,7 @@ v24.22.1
 
 ¿Qué diferencia hay entre instalar una extensión **solo desde el panel** y añadirla **también a `devcontainer.json`**?
 
-> [!TIP]
+**Respuesta:**
 > Si la instalo desde el panel, solo queda instalada en mi entorno. Si la añado a `devcontainer.json`, se instala cada vez que se crea el entorno, para que todos tengan la misma extensión.
 
 ---
@@ -87,7 +87,7 @@ v24.22.1
 
 - **Tema visual elegido** (paso 10) y por qué:
 
-  > [!TIP]
+  **Respuesta:**
   > Catppuccin Mocha + Material Icons, porque estoy acostumbrado a eso.
 - **Ajuste del proyecto** (paso 10). ¿Qué archivo se ha creado y qué contiene?
 
@@ -98,21 +98,21 @@ v24.22.1
   ```
 
 - **Atajo de teclado** (paso 11). ¿Qué acción, qué combinación y para qué te sirve?
-  > [!TIP]
+  **Respuesta:**
   > Cmd + Shift + ; --> Sirve para hacer Rebuild del Codespace.
 - **Snippet** (paso 12). ¿Qué escribes y qué aparece?
-  > [!TIP]
+  **Respuesta:**
   > Escribo cabecera y se genera el comentario en bloque establecido en el snippet.
 - **Automatización al crear el entorno** (paso 14). ¿Qué hace `postCreateCommand` y qué archivos/carpetas han aparecido después de reconstruir?
-  > [!TIP]
+  **Respuesta:**
   > `postCreateCommand` ejecuta `npm install` al crear el entorno para instalar las dependencias definidas por el proyecto. Después aparece o se actualiza la carpeta `node_modules/`; las dependencias y sus versiones se describen en `package.json` y `package-lock.json`. Las carpetas `build/` y `dist/` se generan al ejecutar las tareas de compilación, no por `postCreateCommand`.
 - **Tareas** (paso 13). ¿Cuántas tareas hay en `tasks.json` y qué hace cada una?
-  > [!TIP]
+  **Respuesta:**
   > Hay tres tareas en `.vscode/tasks.json`: la de Java compila `Factura.java`, crea `build/factura.jar` y lo ejecuta; la de TypeScript compila con `npm run build` y ejecuta el resultado con `npm start`; y **Build completo** ejecuta ambas tareas en secuencia.
 
 ¿Qué parte de toda esta configuración es **personal** (solo para ti) y qué parte es **del proyecto** (la recibe cualquiera que abra el repositorio)?
 
-> [!TIP]
+**Respuesta:**
 > Es personal lo que configuro en mi perfil de VS Code y no guardo en el repositorio, como el tema activo o mis atajos de teclado. Es del proyecto lo que está guardado en sus archivos: `.devcontainer/devcontainer.json` define el entorno, las extensiones y `postCreateCommand`; `.vscode/settings.json` comparte los ajustes del editor; `.vscode/tasks.json` define las tareas; y `.vscode/daw.code-snippets` contiene el snippet. Así, cualquiera que abra el repositorio puede recibir esa configuración compartida.
 ---
 
@@ -211,7 +211,7 @@ found 0 vulnerabilities
 
 **Mi política de actualizaciones**: si este entorno lo usara un equipo de 5 personas durante todo el curso, ¿qué dejarías en automático y qué fijarías a mano? Justifícalo.
 
-> [!TIP]
+**Respuesta:**
 > Dejaría que Codespaces y VS Code gestionen automáticamente las actualizaciones del editor y las extensiones, pero probaría los cambios importantes antes de que el equipo dependa de ellos. Fijaría las versiones principales de Java y Node.js en la configuración del contenedor y mantendría las dependencias npm registradas en `package-lock.json`, para que las cinco personas usen las mismas herramientas y versiones. Revisaría periódicamente las actualizaciones y `npm audit`; aplicaría cuanto antes las actualizaciones de seguridad, como la de lodash que eliminó las vulnerabilidades, y probaría las demás antes de incorporarlas para evitar que una actualización rompa el proyecto.
 
 ---
@@ -227,5 +227,5 @@ Anota cualquier problema que hayas tenido y cómo lo resolviste (también si usa
 
 ¿Qué ventaja tiene describir el entorno «como código» frente a instalar cada programa a mano en tu ordenador? Piensa en un equipo con Mac y Windows.
 
-> [!TIP]
+**Respuesta:**
 > Al describir el entorno como código, todos pueden recrear las mismas herramientas y versiones automáticamente, sin tener que instalar y configurar cada programa a mano. En un equipo con Mac y Windows, el contenedor ofrece un entorno común, lo que reduce diferencias entre sistemas y problemas del tipo «en mi ordenador sí funciona». Además, la configuración queda versionada con el proyecto y se puede revisar o actualizar de forma compartida.
