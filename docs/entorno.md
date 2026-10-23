@@ -41,15 +41,15 @@ Resultado de `java -version`, `node -v` y `jupyter lab --version` **después**:
 
 ### 1.3. Comparativa de los dos IDE (paso 6)
 
-|                                        | Editor de GitHub Codespaces | JupyterLab |
-| -------------------------------------- | --------------------------- | ---------- |
-| ¿Libre o propietario?                  |                             |            |
-| Licencia / empresa o comunidad         |                             |            |
-| ¿Tiene coste? ¿Con qué límites?        |                             |            |
-| ¿Se puede usar fuera de GitHub?        |                             |            |
-| Lo que más me ha gustado               |                             |            |
-| Lo que menos me ha gustado             |                             |            |
-| ¿Para qué tipo de trabajo lo elegiría? |                             |            |
+| Aspecto | Editor de GitHub Codespaces | JupyterLab |
+| ------- | --------------------------- | ---------- |
+| ¿Libre o propietario? | Propietario (basado en VS Code). | Libre y de código abierto. |
+| Licencia / responsable | GitHub / Microsoft. | BSD-3-Clause / Project Jupyter. |
+| Coste y límites | Free: 120 h y 15 GB/mes; Pro: 180 h y 20 GB/mes. Excedentes, de pago. | Gratis; el alojamiento puede tener coste. |
+| ¿Fuera de GitHub? | No. VS Code sí puede usarse aparte. | Sí, localmente o en otro servidor. |
+| Lo que más me ha gustado |                             |            |
+| Lo que menos me ha gustado |                             |            |
+| ¿Para qué lo elegiría? |                             |            |
 
 ---
 
