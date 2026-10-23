@@ -16,31 +16,41 @@
 Resultado de `java -version` y `node -v` **antes** de instalar nada:
 
 **Resultado de java -version**
-> bash: java: command not found
+```bash
+bash: java: command not found
+```
 
 **Resultado de node -v**
-> bash: node: command not found
+```bash
+bash: node: command not found
+```
 
 ¿Por qué crees que aparece ese mensaje? (relaciónalo con la diapositiva «Problemas habituales del entorno»)
 
+> [!NOTE]
 > Porque al no tener instalado java ni node en el codespace, no se han añadido al PATH
 
 ### 1.2. Después de la 1.ª reconstrucción (paso 5)
 
 Resultado de `java -version`, `node -v` y `jupyter lab --version` **después**:
 
-> openjdk version "27" 2026-09-15
-> OpenJDK Runtime Environment Temurin-27+35 (build 27+35)
-> OpenJDK 64-Bit Server VM Temurin-27+35 (build 27+35, mixed mode, sharing)
-> v24.22.1
-> 4.6.4
+```bash
+openjdk version "27" 2026-09-15
+OpenJDK Runtime Environment Temurin-27+35 (build 27+35)
+OpenJDK 64-Bit Server VM Temurin-27+35 (build 27+35, mixed mode, sharing)
+v24.22.1
+4.6.4
+```
 
 ¿Qué líneas nuevas han aparecido en `devcontainer.json`? Explica con tus palabras qué hace cada una:
 
-> "ghcr.io/devcontainers/features/python:1": {
->   "installJupyterlab": true
-> }
+```json
+"ghcr.io/devcontainers/features/python:1": {
+  "installJupyterlab": true
+}
+```
 
+> [!NOTE]
 > La primera muestra la fuente de la dependencia Python
 > La segunda indica instalar el editor Jupyter Lab
 > La tercera cierra ese apartado
@@ -68,6 +78,7 @@ Resultado de `java -version`, `node -v` y `jupyter lab --version` **después**:
 
 ¿Qué diferencia hay entre instalar una extensión **solo desde el panel** y añadirla **también a `devcontainer.json`**?
 
+> [!NOTE]
 > Si la instalo desde el panel, solo queda instalada en mi entorno. Si la añado a `devcontainer.json`, se instala cada vez que se crea el entorno, para que todos tengan la misma extensión.
 
 ---
@@ -75,24 +86,32 @@ Resultado de `java -version`, `node -v` y `jupyter lab --version` **después**:
 ## 3. Personalización y automatización (CE 2.c)
 
 - **Tema visual elegido** (paso 10) y por qué:
-> Catppuccin Mocha + Material Icons, porque estoy acostumbrado a eso.
+  > [!NOTE]
+  > Catppuccin Mocha + Material Icons, porque estoy acostumbrado a eso.
 - **Ajuste del proyecto** (paso 10). ¿Qué archivo se ha creado y qué contiene?
 
-> {
->    "editor.formatOnSave": true
-> }
+  ```json
+  {
+     "editor.formatOnSave": true
+  }
+  ```
 
 - **Atajo de teclado** (paso 11). ¿Qué acción, qué combinación y para qué te sirve?
-> Cmd + Shift + ; --> Sirve para hacer Rebuild del Codespace.
+  > [!NOTE]
+  > Cmd + Shift + ; --> Sirve para hacer Rebuild del Codespace.
 - **Snippet** (paso 12). ¿Qué escribes y qué aparece?
-> Escribo cabecera y se genera el comentario en bloque establecido en el snippet.
+  > [!NOTE]
+  > Escribo cabecera y se genera el comentario en bloque establecido en el snippet.
 - **Automatización al crear el entorno** (paso 14). ¿Qué hace `postCreateCommand` y qué archivos/carpetas han aparecido después de reconstruir?
-> `postCreateCommand` ejecuta `npm install` al crear el entorno para instalar las dependencias definidas por el proyecto. Después aparece o se actualiza la carpeta `node_modules/`; las dependencias y sus versiones se describen en `package.json` y `package-lock.json`. Las carpetas `build/` y `dist/` se generan al ejecutar las tareas de compilación, no por `postCreateCommand`.
+  > [!NOTE]
+  > `postCreateCommand` ejecuta `npm install` al crear el entorno para instalar las dependencias definidas por el proyecto. Después aparece o se actualiza la carpeta `node_modules/`; las dependencias y sus versiones se describen en `package.json` y `package-lock.json`. Las carpetas `build/` y `dist/` se generan al ejecutar las tareas de compilación, no por `postCreateCommand`.
 - **Tareas** (paso 13). ¿Cuántas tareas hay en `tasks.json` y qué hace cada una?
-> Hay tres tareas en `.vscode/tasks.json`: la de Java compila `Factura.java`, crea `build/factura.jar` y lo ejecuta; la de TypeScript compila con `npm run build` y ejecuta el resultado con `npm start`; y **Build completo** ejecuta ambas tareas en secuencia.
+  > [!NOTE]
+  > Hay tres tareas en `.vscode/tasks.json`: la de Java compila `Factura.java`, crea `build/factura.jar` y lo ejecuta; la de TypeScript compila con `npm run build` y ejecuta el resultado con `npm start`; y **Build completo** ejecuta ambas tareas en secuencia.
 
 ¿Qué parte de toda esta configuración es **personal** (solo para ti) y qué parte es **del proyecto** (la recibe cualquiera que abra el repositorio)?
 
+> [!NOTE]
 > Es personal lo que configuro en mi perfil de VS Code y no guardo en el repositorio, como el tema activo o mis atajos de teclado. Es del proyecto lo que está guardado en sus archivos: `.devcontainer/devcontainer.json` define el entorno, las extensiones y `postCreateCommand`; `.vscode/settings.json` comparte los ajustes del editor; `.vscode/tasks.json` define las tareas; y `.vscode/daw.code-snippets` contiene el snippet. Así, cualquiera que abra el repositorio puede recibir esa configuración compartida.
 
 ---
@@ -101,6 +120,7 @@ Resultado de `java -version`, `node -v` y `jupyter lab --version` **después**:
 
 Salida completa de la tarea **Build completo** (paso 15):
 
+```text
 === FACTURA generada con Java 27 ===
 Dominio web anual              12.00 EUR
 Alojamiento web                59.90 EUR
@@ -118,6 +138,7 @@ Logotipo corporativo          150.00 EUR
 Base imponible                221.90 EUR
 IVA (21 %)                     46.60 EUR
 TOTAL                         268.50 EUR
+```
 
 | Lenguaje   | Archivo fuente          | Herramienta que lo traduce | Archivo generado | Cómo se ejecuta |
 | ---------- | ----------------------- | -------------------------- | ---------------- | --------------- |
@@ -126,6 +147,7 @@ TOTAL                         268.50 EUR
 
 **Opcional:** ¿has podido ejecutar los mismos archivos desde JupyterLab (paso 19)? ¿Por qué funciona en los dos IDE sin instalar nada más?
 
+> [!WARNING]
 > No funciona Jupyter Lab
 
 ---
@@ -143,25 +165,32 @@ TOTAL                         268.50 EUR
 Versión de Java **antes** (paso 5) y **después** (paso 18):
 
 **antes**
-> openjdk version "27" 2026-09-15
-> OpenJDK Runtime Environment Temurin-27+35 (build 27+35)
-> OpenJDK 64-Bit Server VM Temurin-27+35 (build 27+35, mixed mode, sharing)
+```bash
+openjdk version "27" 2026-09-15
+OpenJDK Runtime Environment Temurin-27+35 (build 27+35)
+OpenJDK 64-Bit Server VM Temurin-27+35 (build 27+35, mixed mode, sharing)
+```
 
 **despues**
-> openjdk version "21" 2023-09-19 LTS
-> OpenJDK Runtime Environment Microsoft-8425986 (build 21+35-LTS)
-> OpenJDK 64-Bit Server VM Microsoft-8425986 (build 21+35-LTS, mixed mode, sharing)
+```bash
+openjdk version "21" 2023-09-19 LTS
+OpenJDK Runtime Environment Microsoft-8425986 (build 21+35-LTS)
+OpenJDK 64-Bit Server VM Microsoft-8425986 (build 21+35-LTS, mixed mode, sharing)
+```
 
 Resultado de `npm outdated` (paso 17):
 
+```text
 Package         Current    Wanted   Latest  Location                    Depended by
 @types/lodash  4.14.202  4.14.202  4.17.27  node_modules/@types/lodash  plantilla-entorno-daw-ismael
 @types/node    20.11.30  20.11.30   26.6.5  node_modules/@types/node    plantilla-entorno-daw-ismael
 lodash          4.17.20   4.17.20   4.18.1  node_modules/lodash         plantilla-entorno-daw-ismael
 typescript        5.4.5     5.4.5    7.0.2  node_modules/typescript     plantilla-entorno-daw-ismael
+```
 
 Resultado de `npm audit` **antes** de actualizar lodash (solo el resumen final):
 
+```text
 lodash vulnerable to Prototype Pollution via array path bypass in `_.unset` and `_.omit` - https://github.com/advisories/GHSA-f23m-r3pf-42rh
 Lodash has Prototype Pollution Vulnerability in `_.unset` and `_.omit` functions - https://github.com/advisories/GHSA-xxjr-mmjv-4gpg
 fix available via `npm audit fix --force`
@@ -172,13 +201,17 @@ node_modules/lodash
 
 To address all issues, run:
   npm audit fix --force
+```
 
 Resultado de `npm audit` **después**:
 
+```text
 found 0 vulnerabilities
+```
 
 **Mi política de actualizaciones**: si este entorno lo usara un equipo de 5 personas durante todo el curso, ¿qué dejarías en automático y qué fijarías a mano? Justifícalo.
 
+> [!NOTE]
 > Dejaría que Codespaces y VS Code gestionen automáticamente las actualizaciones del editor y las extensiones, pero probaría los cambios importantes antes de que el equipo dependa de ellos. Fijaría las versiones principales de Java y Node.js en la configuración del contenedor y mantendría las dependencias npm registradas en `package-lock.json`, para que las cinco personas usen las mismas herramientas y versiones. Revisaría periódicamente las actualizaciones y `npm audit`; aplicaría cuanto antes las actualizaciones de seguridad, como la de lodash que eliminó las vulnerabilidades, y probaría las demás antes de incorporarlas para evitar que una actualización rompa el proyecto.
 
 ---
@@ -187,10 +220,12 @@ found 0 vulnerabilities
 
 Anota cualquier problema que hayas tenido y cómo lo resolviste (también si usaste un fragmento completo).
 
+> [!WARNING]
 > No he conseguido que funcione Jupyter
 
 ## 7. Reflexión final
 
 ¿Qué ventaja tiene describir el entorno «como código» frente a instalar cada programa a mano en tu ordenador? Piensa en un equipo con Mac y Windows.
 
+> [!NOTE]
 > Al describir el entorno como código, todos pueden recrear las mismas herramientas y versiones automáticamente, sin tener que instalar y configurar cada programa a mano. En un equipo con Mac y Windows, el contenedor ofrece un entorno común, lo que reduce diferencias entre sistemas y problemas del tipo «en mi ordenador sí funciona». Además, la configuración queda versionada con el proyecto y se puede revisar o actualizar de forma compartida.
