@@ -16,5 +16,6 @@
         "Catppuccin.catppuccin-vsc"
       ]
     }
-  }
+  },
+  "postCreateCommand": "npm install"
 }

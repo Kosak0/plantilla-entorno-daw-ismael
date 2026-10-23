@@ -69,11 +69,12 @@ Resultado de `java -version`, `node -v` y `jupyter lab --version` **después**:
 ## 3. Personalización y automatización (CE 2.c)
 
 - **Tema visual elegido** (paso 10) y por qué:
+> Catppuccin Mocha + Material Icons, porque estoy acostumbrado a eso.
 - **Ajuste del proyecto** (paso 10). ¿Qué archivo se ha creado y qué contiene?
 
-```
-pega aquí el contenido de .vscode/settings.json
-```
+{
+    "editor.formatOnSave": true
+}
 
 - **Atajo de teclado** (paso 11). ¿Qué acción, qué combinación y para qué te sirve?
 - **Snippet** (paso 12). ¿Qué escribes y qué aparece?
