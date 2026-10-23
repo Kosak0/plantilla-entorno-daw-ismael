@@ -21,16 +21,3 @@ Sigue el enunciado paso a paso: **no tienes que programar nada**.
 1. Pulsa **Code → Codespaces → Create codespace on main**.
 2. Espera a que termine de construirse el entorno.
 3. Pulsa `Ctrl+Shift+B` (Windows) o `Cmd+Shift+B` (Mac) para compilar y ejecutar todo.
-
-## Abrir JupyterLab
-
-JupyterLab se instala en el entorno, pero hay que iniciar el servidor cuando se vaya a usar.
-En el terminal del Codespace ejecuta:
-
-```bash
-jupyter lab --ip=0.0.0.0 --no-browser
-```
-
-El Codespace reenviará el puerto 8888; abre ese puerto desde la pestaña **Ports** y usa la
-URL con token que muestra Jupyter en el terminal. No compartas esa URL: el token permite
-acceder al servidor.

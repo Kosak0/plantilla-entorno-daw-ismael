@@ -7,13 +7,5 @@
     "ghcr.io/devcontainers/features/python:1": {
       "installJupyterlab": true
     }
-  },
-  "forwardPorts": [8888],
-  "portsAttributes": {
-    "8888": {
-      "label": "JupyterLab",
-      "onAutoForward": "notify",
-      "visibility": "private"
-    }
   }
 }

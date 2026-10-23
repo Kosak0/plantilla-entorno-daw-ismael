@@ -8,14 +8,6 @@
       "installJupyterlab": true
     }
   },
-  "forwardPorts": [8888],
-  "portsAttributes": {
-    "8888": {
-      "label": "JupyterLab",
-      "onAutoForward": "notify",
-      "visibility": "private"
-    }
-  },
   "customizations": {
     "vscode": {
       "extensions": [
