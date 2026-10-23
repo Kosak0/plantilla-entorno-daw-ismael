@@ -132,9 +132,15 @@ TOTAL                         268.50 EUR
 
 Versión de Java **antes** (paso 5) y **después** (paso 18):
 
-```
-pega aquí
-```
+**antes**
+openjdk version "27" 2026-09-15
+OpenJDK Runtime Environment Temurin-27+35 (build 27+35)
+OpenJDK 64-Bit Server VM Temurin-27+35 (build 27+35, mixed mode, sharing)
+
+**despues**
+openjdk version "21" 2023-09-19 LTS
+OpenJDK Runtime Environment Microsoft-8425986 (build 21+35-LTS)
+OpenJDK 64-Bit Server VM Microsoft-8425986 (build 21+35-LTS, mixed mode, sharing)
 
 Resultado de `npm outdated` (paso 17):
 
