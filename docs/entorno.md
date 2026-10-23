@@ -1,7 +1,7 @@
 # Documentación de mi entorno de desarrollo · Práctica 2
 
-**Nombre y apellidos:**
-**URL de mi repositorio:**
+**Ismael Navas Soto:**
+**[URL de mi repositorio:](https://github.com/Kosak0/plantilla-entorno-daw-ismael)**
 
 > Rellena cada apartado a medida que avanzas. Donde pone «pega aquí», copia el texto
 > de la terminal (no hace falta captura). Escribe con tus palabras: no se valora la longitud,
@@ -15,13 +15,17 @@
 
 Resultado de `java -version` y `node -v` **antes** de instalar nada:
 
-```
-pega aquí
-```
+**Resultado de java -version**
+openjdk version "27" 2026-09-15
+OpenJDK Runtime Environment Temurin-27+35 (build 27+35)
+OpenJDK 64-Bit Server VM Temurin-27+35 (build 27+35, mixed mode, sharing)
+
+**Resultado de node -v**
+v26.12.0
 
 ¿Por qué crees que aparece ese mensaje? (relaciónalo con la diapositiva «Problemas habituales del entorno»)
 
-> 
+>
 
 ### 1.2. Después de la 1.ª reconstrucción (paso 5)
 
@@ -33,32 +37,32 @@ pega aquí
 
 ¿Qué líneas nuevas han aparecido en `devcontainer.json`? Explica con tus palabras qué hace cada una:
 
-> 
+>
 
 ### 1.3. Comparativa de los dos IDE (paso 6)
 
-|                                         | Editor de GitHub Codespaces | JupyterLab |
-|-----------------------------------------|-----------------------------|------------|
-| ¿Libre o propietario?                   |                             |            |
-| Licencia / empresa o comunidad          |                             |            |
-| ¿Tiene coste? ¿Con qué límites?         |                             |            |
-| ¿Se puede usar fuera de GitHub?         |                             |            |
-| Lo que más me ha gustado                |                             |            |
-| Lo que menos me ha gustado              |                             |            |
-| ¿Para qué tipo de trabajo lo elegiría?  |                             |            |
+|                                        | Editor de GitHub Codespaces | JupyterLab |
+| -------------------------------------- | --------------------------- | ---------- |
+| ¿Libre o propietario?                  |                             |            |
+| Licencia / empresa o comunidad         |                             |            |
+| ¿Tiene coste? ¿Con qué límites?        |                             |            |
+| ¿Se puede usar fuera de GitHub?        |                             |            |
+| Lo que más me ha gustado               |                             |            |
+| Lo que menos me ha gustado             |                             |            |
+| ¿Para qué tipo de trabajo lo elegiría? |                             |            |
 
 ---
 
 ## 2. Módulos y extensiones (CE 2.b)
 
-| Extensión | ¿Para qué sirve? | ¿Qué cambió al instalarla? | ¿La mantengo? ¿Por qué? |
-|-----------|------------------|----------------------------|-------------------------|
-| Extension Pack for Java |   |   |   |
-| Code Spell Checker      |   |   |   |
+| Extensión               | ¿Para qué sirve? | ¿Qué cambió al instalarla? | ¿La mantengo? ¿Por qué? |
+| ----------------------- | ---------------- | -------------------------- | ----------------------- |
+| Extension Pack for Java |                  |                            |                         |
+| Code Spell Checker      |                  |                            |                         |
 
 ¿Qué diferencia hay entre instalar una extensión **solo desde el panel** y añadirla **también a `devcontainer.json`**?
 
-> 
+>
 
 ---
 
@@ -78,7 +82,7 @@ pega aquí el contenido de .vscode/settings.json
 
 ¿Qué parte de toda esta configuración es **personal** (solo para ti) y qué parte es **del proyecto** (la recibe cualquiera que abra el repositorio)?
 
-> 
+>
 
 ---
 
@@ -90,26 +94,26 @@ Salida completa de la tarea **Build completo** (paso 15):
 pega aquí
 ```
 
-| Lenguaje | Archivo fuente | Herramienta que lo traduce | Archivo generado | Cómo se ejecuta |
-|----------|----------------|----------------------------|------------------|-----------------|
-| Java       | `src/java/Factura.java` |   |   |   |
-| TypeScript | `src/ts/factura.ts`     |   |   |   |
+| Lenguaje   | Archivo fuente          | Herramienta que lo traduce | Archivo generado | Cómo se ejecuta |
+| ---------- | ----------------------- | -------------------------- | ---------------- | --------------- |
+| Java       | `src/java/Factura.java` |                            |                  |                 |
+| TypeScript | `src/ts/factura.ts`     |                            |                  |                 |
 
 **Opcional:** ¿has podido ejecutar los mismos archivos desde JupyterLab (paso 19)? ¿Por qué funciona en los dos IDE sin instalar nada más?
 
-> 
+>
 
 ---
 
 ## 5. Sistema de actualizaciones (CE 2.d)
 
-| Elemento | ¿Quién lo actualiza? | Modo (automático / manual / ninguno) | Qué he configurado yo |
-|----------|----------------------|--------------------------------------|-----------------------|
-| El editor de Codespaces |   |   |   |
-| Las extensiones         |   |   |   |
-| Java                    |   |   |   |
-| Node.js                 |   |   |   |
-| Dependencias npm (lodash, typescript…) |   |   |   |
+| Elemento                               | ¿Quién lo actualiza? | Modo (automático / manual / ninguno) | Qué he configurado yo |
+| -------------------------------------- | -------------------- | ------------------------------------ | --------------------- |
+| El editor de Codespaces                |                      |                                      |                       |
+| Las extensiones                        |                      |                                      |                       |
+| Java                                   |                      |                                      |                       |
+| Node.js                                |                      |                                      |                       |
+| Dependencias npm (lodash, typescript…) |                      |                                      |                       |
 
 Versión de Java **antes** (paso 5) y **después** (paso 18):
 
@@ -137,7 +141,7 @@ pega aquí
 
 **Mi política de actualizaciones**: si este entorno lo usara un equipo de 5 personas durante todo el curso, ¿qué dejarías en automático y qué fijarías a mano? Justifícalo.
 
-> 
+>
 
 ---
 
@@ -145,10 +149,10 @@ pega aquí
 
 Anota cualquier problema que hayas tenido y cómo lo resolviste (también si usaste un fragmento completo).
 
-> 
+>
 
 ## 7. Reflexión final
 
 ¿Qué ventaja tiene describir el entorno «como código» frente a instalar cada programa a mano en tu ordenador? Piensa en un equipo con Mac y Windows.
 
-> 
+>
