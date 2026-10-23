@@ -86,8 +86,10 @@ v24.22.1
 ## 3. Personalización y automatización (CE 2.c)
 
 - **Tema visual elegido** (paso 10) y por qué:
+
   > [!NOTE]
   > Catppuccin Mocha + Material Icons, porque estoy acostumbrado a eso.
+
 - **Ajuste del proyecto** (paso 10). ¿Qué archivo se ha creado y qué contiene?
 
   ```json
@@ -97,15 +99,22 @@ v24.22.1
   ```
 
 - **Atajo de teclado** (paso 11). ¿Qué acción, qué combinación y para qué te sirve?
+
   > [!NOTE]
   > Cmd + Shift + ; --> Sirve para hacer Rebuild del Codespace.
+
 - **Snippet** (paso 12). ¿Qué escribes y qué aparece?
+
   > [!NOTE]
   > Escribo cabecera y se genera el comentario en bloque establecido en el snippet.
+
 - **Automatización al crear el entorno** (paso 14). ¿Qué hace `postCreateCommand` y qué archivos/carpetas han aparecido después de reconstruir?
+
   > [!NOTE]
   > `postCreateCommand` ejecuta `npm install` al crear el entorno para instalar las dependencias definidas por el proyecto. Después aparece o se actualiza la carpeta `node_modules/`; las dependencias y sus versiones se describen en `package.json` y `package-lock.json`. Las carpetas `build/` y `dist/` se generan al ejecutar las tareas de compilación, no por `postCreateCommand`.
+
 - **Tareas** (paso 13). ¿Cuántas tareas hay en `tasks.json` y qué hace cada una?
+
   > [!NOTE]
   > Hay tres tareas en `.vscode/tasks.json`: la de Java compila `Factura.java`, crea `build/factura.jar` y lo ejecuta; la de TypeScript compila con `npm run build` y ejecuta el resultado con `npm start`; y **Build completo** ejecuta ambas tareas en secuencia.
 
