@@ -37,7 +37,13 @@ Resultado de `java -version`, `node -v` y `jupyter lab --version` **después**:
 
 ¿Qué líneas nuevas han aparecido en `devcontainer.json`? Explica con tus palabras qué hace cada una:
 
->
+> "ghcr.io/devcontainers/features/python:1": {
+>   "installJupyterlab": true
+> }
+
+> La primera muestra la fuente de la dependencia Python
+> La segunda indica instalar el editor Jupyter Lab
+> La tercera cierra ese apartado
 
 ### 1.3. Comparativa de los dos IDE (paso 6)
 
@@ -72,14 +78,18 @@ Resultado de `java -version`, `node -v` y `jupyter lab --version` **después**:
 > Catppuccin Mocha + Material Icons, porque estoy acostumbrado a eso.
 - **Ajuste del proyecto** (paso 10). ¿Qué archivo se ha creado y qué contiene?
 
-{
-    "editor.formatOnSave": true
-}
+> {
+>    "editor.formatOnSave": true
+> }
 
 - **Atajo de teclado** (paso 11). ¿Qué acción, qué combinación y para qué te sirve?
+> Cmd + Shift + ; --> Sirve para hacer Rebuild del Codespace.
 - **Snippet** (paso 12). ¿Qué escribes y qué aparece?
+> Escribo cabecera y se genera el comentario en bloque establecido en el snippet.
 - **Automatización al crear el entorno** (paso 14). ¿Qué hace `postCreateCommand` y qué archivos/carpetas han aparecido después de reconstruir?
+> `postCreateCommand` ejecuta `npm install` al crear el entorno para instalar las dependencias definidas por el proyecto. Después aparece o se actualiza la carpeta `node_modules/`; las dependencias y sus versiones se describen en `package.json` y `package-lock.json`. Las carpetas `build/` y `dist/` se generan al ejecutar las tareas de compilación, no por `postCreateCommand`.
 - **Tareas** (paso 13). ¿Cuántas tareas hay en `tasks.json` y qué hace cada una?
+> Hay tres tareas en `.vscode/tasks.json`: la de Java compila `Factura.java`, crea `build/factura.jar` y lo ejecuta; la de TypeScript compila con `npm run build` y ejecuta el resultado con `npm start`; y **Build completo** ejecuta ambas tareas en secuencia.
 
 ¿Qué parte de toda esta configuración es **personal** (solo para ti) y qué parte es **del proyecto** (la recibe cualquiera que abra el repositorio)?
 
@@ -133,14 +143,14 @@ TOTAL                         268.50 EUR
 Versión de Java **antes** (paso 5) y **después** (paso 18):
 
 **antes**
-openjdk version "27" 2026-09-15
-OpenJDK Runtime Environment Temurin-27+35 (build 27+35)
-OpenJDK 64-Bit Server VM Temurin-27+35 (build 27+35, mixed mode, sharing)
+> openjdk version "27" 2026-09-15
+> OpenJDK Runtime Environment Temurin-27+35 (build 27+35)
+> OpenJDK 64-Bit Server VM Temurin-27+35 (build 27+35, mixed mode, sharing)
 
 **despues**
-openjdk version "21" 2023-09-19 LTS
-OpenJDK Runtime Environment Microsoft-8425986 (build 21+35-LTS)
-OpenJDK 64-Bit Server VM Microsoft-8425986 (build 21+35-LTS, mixed mode, sharing)
+> openjdk version "21" 2023-09-19 LTS
+> OpenJDK Runtime Environment Microsoft-8425986 (build 21+35-LTS)
+> OpenJDK 64-Bit Server VM Microsoft-8425986 (build 21+35-LTS, mixed mode, sharing)
 
 Resultado de `npm outdated` (paso 17):
 
